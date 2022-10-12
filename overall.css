@@ -1,0 +1,44 @@
+/* These bits deal with the sidebar on the left of the webapp*/
+.sidebarmenu {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #A2B4DD;
+  overflow-x: hidden;
+  padding: 20px 0px 0px;
+}
+
+.menuitem {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #8EA3D5;
+  width: auto;
+}
+
+.menuitem:hover {
+  background-color: #7A93CE;
+}
+
+.sidebarTitle {
+  text-align: center;
+  padding: 20px 0px 40px 0px;
+  font-size: 1.5em;
+}
+
+.sidebarFooter {
+  text-align: center;
+  padding: 50px 0px 0px 0px;
+}
+
+/* Deal with each tab's content formatting in this section*/
+.tabContent {
+  padding: 13px 180px 0px 200px;
+}
+
+/* Miscellaneous CSS for the rest of the web-app*/
+body {
+  background-color: #DDCBA4;
+}

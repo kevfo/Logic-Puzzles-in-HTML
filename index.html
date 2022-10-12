@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- For grid generation and whatnot... -->
+    <link rel = "stylesheet" href = "overall.css" style = "link/css"> </link>
+    <script src = "assets/overall.js"> </script>
+    <!-- END -->
+
+    <title> 🧠 Logic Puzzles in JLG </title>
+  </head>
+  <body>
+    <div class = 'sidebarmenu'>
+      <div class = 'sidebarTitle'> Logic Puzzles </div>
+      <div class = 'menuitem' id = 'introDiv' onclick = "navigateBetween('intro', this)">
+        Introduction
+      </div>
+      <br/>
+      <div class = 'menuitem' id = 'oneDiv' onclick = "navigateBetween('lvl1', this)">
+        Easy
+      </div>
+      <br/>
+      <div class = 'menuitem' id = 'twoDiv' onclick = "navigateBetween('lvl2', this)">
+        Medium
+      </div>
+      <br/>
+      <div class = 'menuitem' id = 'threeDiv' onclick = "navigateBetween('lvl3', this)">
+        Hard
+      </div>
+      <br/>
+      <div class = 'sidebarFooter'> By the JLG team </div>
+    </div>
+
+    <!-- Intro Tab -->
+    <div class = "tabContent" id = 'intro'>
+      <h2> Welcome to Logic Puzzles! </h2>
+      <p>
+        Welcome to thingamabob of a game that you can fiddle around with!
+      </p>
+    </div>
+
+    <!-- Do we need an intro section? -->
+
+
+
+    <!-- Easy one -->
+    <div class = "tabContent" id = 'lvl1'>
+      <h2> Puzzle #1 </h2>
+      <p>
+        Welcome to thingamabob of a game that you can fiddle around with!
+      </p>
+      <div class = "game">
+        <table class = "logicGrid"> </table>
+        <ol class = 'clues' id = 'game1clues'>
+
+        </ol>
+      </div>
+    </div>
+
+    <!-- Med one -->
+    <div class = "tabContent" id = 'lvl2'>
+      <h2> Puzzle #2 </h2>
+      <p>
+        Welcome to thingamabob of a game that you can fiddle around with!
+      </p>
+      <div class = "game">
+        <table class = "logicGrid"> </table>
+        <ol class = 'clues' id = 'game1clues'>
+
+        </ol>
+      </div>
+    </div>
+
+    <!-- Hard one -->
+    <div class = "tabContent" id = 'lvl3'>
+      <h2> Puzzle #3 </h2>
+      <p>
+        Welcome to thingamabob of a game that you can fiddle around with!
+      </p>
+      <div class = "game">
+        <table class = "logicGrid"> </table>
+        <ol class = 'clues' id = 'game1clues'>
+
+        </ol>
+      </div>
+    </div>
+
+    <!-- Run this bit of JS once everything above is rendered -->
+    <script type="text/javascript">
+      document.getElementById('introDiv').click();
+    </script>
+  </body>
+</html>
