@@ -15,7 +15,7 @@
   padding-bottom: 20px;
   text-align: center;
   background-color: #8EA3D5;
-  width: auto;
+  width: 100%;
 }
 
 .menuitem:hover {
@@ -34,8 +34,73 @@
 }
 
 /* Deal with each tab's content formatting in this section*/
+.intro {
+    padding-right: 50px;
+}
+
 .tabContent {
-  padding: 13px 180px 0px 200px;
+  padding: 13px 50px 0px 200px;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10em;
+}
+
+.logicGrid {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.story {
+  line-height: 1.5em;
+}
+
+li {
+  padding-top: 1em;
+}
+
+.clueContainer {
+  background-color: white;
+  border: dashed black;
+  border-radius: 10px;
+  width: 20em;
+}
+
+/* For the logic grid itself */
+.logicGrid {
+  border: none;
+}
+
+/* For the logic grid's cells */
+.logicCell {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1.5px solid black;
+}
+
+.selectedCell {
+  width: 30px;
+  height: 30px;
+  background-color: #7A9A01;
+  border: 1.5px solid black;
+}
+
+.cancelCell {
+  width: 30px;
+  height: 30px;
+  background-color: #AF272F;
+  border: 1.5px solid black;
+}
+
+.logicCell:hover {
+  background-color: #FEFDF4;
+}
+
+tr {
+  width: 100%;
 }
 
 /* Miscellaneous CSS for the rest of the web-app*/
