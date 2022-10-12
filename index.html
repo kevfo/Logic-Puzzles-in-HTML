@@ -35,8 +35,11 @@
     <!-- Intro Tab -->
     <div class = "tabContent" id = 'intro'>
       <h2> Welcome to Logic Puzzles! </h2>
-      <p>
-        Welcome to thingamabob of a game that you can fiddle around with!
+      <p class = 'intro'>
+        Welcome to this thingamabob of a game that you can fiddle around with!
+
+
+        What in bloody hell should I include on this page?
       </p>
     </div>
 
@@ -47,48 +50,78 @@
     <!-- Easy one -->
     <div class = "tabContent" id = 'lvl1'>
       <h2> Puzzle #1 </h2>
-      <p>
-        Welcome to thingamabob of a game that you can fiddle around with!
+      <p class = 'story'>
+        It's a bright and sunny day at the Jurong Lake Gardens and this is Kenny - an eager boy -
+        visit to the gardens!  Can you help him learn more about the flora and the fauna that exists
+        within the gardens?
       </p>
+      <br />
       <div class = "game">
-        <table class = "logicGrid"> </table>
-        <ol class = 'clues' id = 'game1clues'>
+        <table class = "logicGrid">
+          <tbody id = 'logicGrid1'>
 
-        </ol>
+          </tbody>
+        </table>
+        <div class = "clueContainer">
+          <p style = "text-align:center;"> Clues </p>
+          <ol class = 'clues' id = 'game1clues'>
+            <li> The tree has thick leaves, the tree with whtie flowers, and the tree that is used for making furniture are all different trees. </li>
+            <li> The trees that is used for making fish poison doesn't have white flowers. </li>
+            <li> Of the tree with thick leaves and the tree with white flowers, one is used to make fish poison. </li>
+            <li> The tree with thick leaves cannot be used to make fish poison. </li>
+          </ol>
+        </div>
       </div>
     </div>
 
     <!-- Med one -->
     <div class = "tabContent" id = 'lvl2'>
       <h2> Puzzle #2 </h2>
-      <p>
+      <p class = 'story'>
         Welcome to thingamabob of a game that you can fiddle around with!
       </p>
       <div class = "game">
-        <table class = "logicGrid"> </table>
-        <ol class = 'clues' id = 'game1clues'>
+        <table class = "logicGrid">
+          <tbody id = "logicGrid2">
 
-        </ol>
+          </tbody>
+        </table>
+        <div class = "clueContainer">
+          <ol class = 'clues' id = 'game1clues'>
+
+          </ol>
+        </div>
       </div>
     </div>
 
     <!-- Hard one -->
     <div class = "tabContent" id = 'lvl3'>
       <h2> Puzzle #3 </h2>
-      <p>
+      <p class = 'story'>
         Welcome to thingamabob of a game that you can fiddle around with!
       </p>
       <div class = "game">
-        <table class = "logicGrid"> </table>
-        <ol class = 'clues' id = 'game1clues'>
+        <table class = "logicGrid">
+          <tbody id = "logicGrid3">
 
-        </ol>
+          </tbody>
+        </table>
+        <div class = "clueContainer">
+          <ol class = 'clues' id = 'game1clues'>
+
+          </ol>
+        </div>
       </div>
     </div>
 
     <!-- Run this bit of JS once everything above is rendered -->
     <script type="text/javascript">
       document.getElementById('introDiv').click();
+
+      // Make the logic grids here:
+      makeLogicGrid(10, 10, 5, 'logicGrid1');
+      makeLogicGrid(10, 10, 5, 'logicGrid2');
+      makeLogicGrid(10, 10, 5, 'logicGrid3');
     </script>
   </body>
 </html>
