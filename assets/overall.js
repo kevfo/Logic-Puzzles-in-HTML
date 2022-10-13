@@ -57,3 +57,19 @@ function clickCell(cellID) {
   }
   return selectedCell;
 }
+
+// == WINNING CONDITIONS ==
+
+// Checks to see the grid in question has been won:
+function hasWonPuzzle(tableID, solution) {
+  let table = document.getElementById(tableID);
+  let selectedChoices = [], hasWon = false;
+
+  table.innerHTML.split('<tr>').forEach(element => {
+    if (solution.contains(element)) {
+
+    }
+  })
+
+  return hasWon ? true : false;
+}
