@@ -1,3 +1,14 @@
+/* Deal with the application's fonts */
+@font-face {
+  src: url("assets/fonts/Futura Std Book.ttf");
+  font-family: normalFutura;
+}
+
+@font-face {
+  src: url('assets/fonts/Futura Std Heavy.ttf');
+  font-family: titleFutura;
+}
+
 /* These bits deal with the sidebar on the left of the webapp*/
 .sidebarmenu {
   height: 100%;
@@ -8,6 +19,7 @@
   background-color: #A2B4DD;
   overflow-x: hidden;
   padding: 20px 0px 0px;
+  font-family: normalFutura;
 }
 
 .menuitem {
@@ -16,6 +28,8 @@
   text-align: center;
   background-color: #8EA3D5;
   width: 100%;
+  font-family: normalFutura;
+  cursor: pointer;
 }
 
 .menuitem:hover {
@@ -26,26 +40,33 @@
   text-align: center;
   padding: 20px 0px 40px 0px;
   font-size: 1.5em;
+  font-family: titleFutura;
 }
 
 .sidebarFooter {
   text-align: center;
   padding: 50px 0px 0px 0px;
+  font-family: normalFutura;
 }
 
 /* Deal with each tab's content formatting in this section*/
 .intro {
     padding-right: 50px;
+    line-height: 1.5em;
 }
 
 .tabContent {
   padding: 13px 50px 0px 200px;
+  font-family: normalFutura;
+  overflow: hidden;
 }
 
 .game {
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
-  column-gap: 10em;
+  column-gap: 1em;
+  font-family: normalFutura;
 }
 
 .logicGrid {
@@ -58,7 +79,8 @@
 }
 
 li {
-  padding-top: 1em;
+  padding-top: 0.6em;
+  font-family: normalFutura;
 }
 
 .clueContainer {
@@ -68,6 +90,22 @@ li {
   width: 20em;
 }
 
+.submitButton {
+  background-color: #D5BF8E;
+  border: 1px solid;
+  border-radius: rounded;
+  padding: 5px 5px 5px;
+  text-align: center;
+  font-family: normalFutura;
+  border-radius: 5px rounded;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #CEB37A;
+  cursor: pointer;
+}
+
 /* For the logic grid itself */
 .logicGrid {
   border: none;
@@ -75,35 +113,67 @@ li {
 
 /* For the logic grid's cells */
 .logicCell {
-  width: 30px;
+  width: 50px;
   height: 30px;
   background-color: white;
   border: 1.5px solid black;
+  cursor: pointer;
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 
 .selectedCell {
-  width: 30px;
+  width: 50px;
   height: 30px;
   background-color: #7A9A01;
   border: 1.5px solid black;
+  cursor: pointer;
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 
 .cancelCell {
-  width: 30px;
+  width: 50px;
   height: 30px;
   background-color: #AF272F;
   border: 1.5px solid black;
+  cursor: pointer;
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 
 .logicCell:hover {
   background-color: #FEFDF4;
+  cursor: pointer;
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 
 tr {
   width: 100%;
 }
 
+.rowTitle {
+  width: 125px;
+  text-align: left;
+  padding-right: 10px;
+}
+
+.colTitle {
+  text-align: left;
+  height: 10%;
+  width: 50px;
+  transform: rotate(90deg);
+  padding-bottom: 10px;
+}
+
 /* Miscellaneous CSS for the rest of the web-app*/
 body {
   background-color: #DDCBA4;
+}
+
+/* Modal that pops up when player clicks on check answers button */
+.winningModal {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  display: none;
 }

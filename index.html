@@ -6,6 +6,7 @@
     <!-- For grid generation and whatnot... -->
     <link rel = "stylesheet" href = "overall.css" style = "link/css"> </link>
     <script src = "assets/overall.js"> </script>
+    <script src = "assets/levelData.js"> </script>
     <!-- END -->
 
     <title> 🧠 Logic Puzzles in JLG </title>
@@ -29,7 +30,7 @@
         Hard
       </div>
       <br/>
-      <div class = 'sidebarFooter'> By the JLG team </div>
+      <div class = 'sidebarFooter'> By the <a href = "https://www.nparks.gov.sg/juronglakegardens" target = "_blank" class = 'jlg'> JLG team </a> </div>
     </div>
 
     <!-- Intro Tab -->
@@ -37,10 +38,8 @@
       <h2> Welcome to Logic Puzzles! </h2>
       <p class = 'intro'>
         Welcome to this thingamabob of a game that you can fiddle around with!
-
-
-        What in bloody hell should I include on this page?
       </p>
+      <p style = "padding-top:2.5em;"> We hope that you have as much as fun playing this game as we had making this game!  </p>
     </div>
 
     <!-- Do we need an intro section? -->
@@ -49,28 +48,35 @@
 
     <!-- Easy one -->
     <div class = "tabContent" id = 'lvl1'>
-      <h2> Puzzle #1 </h2>
+      <h2> Puzzle #1 : Kenny's Mishaps </h2>
       <p class = 'story'>
-        It's a bright and sunny day at the Jurong Lake Gardens and this is Kenny - an eager boy -
-        visit to the gardens!  Can you help him learn more about the flora and the fauna that exists
-        within the gardens?
+        It's a bright and sunny day at the Jurong Lake Gardens and young Kenny has taken notes on several things!  Can you help him decipher
+        the notes that he has taken?
       </p>
-      <br />
       <div class = "game">
         <table class = "logicGrid">
           <tbody id = 'logicGrid1'>
 
           </tbody>
         </table>
-        <div class = "clueContainer">
-          <p style = "text-align:center;"> Clues </p>
-          <ol class = 'clues' id = 'game1clues'>
-            <li> The tree has thick leaves, the tree with whtie flowers, and the tree that is used for making furniture are all different trees. </li>
-            <li> The trees that is used for making fish poison doesn't have white flowers. </li>
-            <li> Of the tree with thick leaves and the tree with white flowers, one is used to make fish poison. </li>
-            <li> The tree with thick leaves cannot be used to make fish poison. </li>
-          </ol>
+        <div>
+          <div class = "clueContainer">
+            <p style = "text-align:center;"> *** Clues *** </p>
+            <ol class = 'clues' id = 'game1clues'>
+              <li> The tree with thick leaves, the tree with white flowers, and the tree that is used for making furniture are all different trees. </li>
+              <li> The tree that is used for making fish poison doesn't have white flowers. </li>
+              <li> Of the tree with thick leaves and the tree with white flowers, one is used to make fish poison. </li>
+              <li> The tree with thick leaves cannot be used to make fish poison. </li>
+            </ol>
+          </div>
+          <br/>
+          <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid1", "levelTwo")'>
+            Check solution!
+          </button>
         </div>
+      </div>
+      <div class = '1winningModal'>
+
       </div>
     </div>
 
@@ -78,7 +84,7 @@
     <div class = "tabContent" id = 'lvl2'>
       <h2> Puzzle #2 </h2>
       <p class = 'story'>
-        Welcome to thingamabob of a game that you can fiddle around with!
+        This is Jeremy's first time in the gardens and he is
       </p>
       <div class = "game">
         <table class = "logicGrid">
@@ -91,6 +97,12 @@
 
           </ol>
         </div>
+        <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid2", "levelOne")'>
+          Check solution!
+        </button>
+      </div>
+      <div class = '2winningModal'>
+
       </div>
     </div>
 
@@ -111,6 +123,12 @@
 
           </ol>
         </div>
+        <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid3", "levelThree")'>
+          Check solution!
+        </button>
+      </div>
+      <div class = '3winningModal'>
+
       </div>
     </div>
 
@@ -119,9 +137,9 @@
       document.getElementById('introDiv').click();
 
       // Make the logic grids here:
-      makeLogicGrid(10, 10, 5, 'logicGrid1');
-      makeLogicGrid(10, 10, 5, 'logicGrid2');
-      makeLogicGrid(10, 10, 5, 'logicGrid3');
+      makeLogicGrid(6, 6, 3, 'logicGrid1', levelOne);
+      makeLogicGrid(10, 10, 5, 'logicGrid2', levelTwo);
+      makeLogicGrid(10, 10, 5, 'logicGrid3', levelThree);
     </script>
   </body>
 </html>
