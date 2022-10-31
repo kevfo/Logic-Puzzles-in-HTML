@@ -19,7 +19,7 @@
       </div>
       <br/>
       <div class = 'menuitem' id = 'oneDiv' onclick = "navigateBetween('lvl1', this)">
-        Easy
+        Trees
       </div>
       <br/>
       <div class = 'menuitem' id = 'twoDiv' onclick = "navigateBetween('lvl2', this)">
@@ -50,7 +50,7 @@
     <div class = "tabContent" id = 'lvl1'>
       <h2> Puzzle #1 : Kenny's Mishaps </h2>
       <p class = 'story'>
-        It's a bright and sunny day at the Jurong Lake Gardens and young Kenny has taken notes on several things!  Can you help him decipher
+        It's a bright and sunny day at the Jurong Lake Gardens and young Kenny has taken notes on several trees that he found throughout a lovely stroll in the gardens!  However, he has messed up his notes and now, cannot figure out what he has written!  Can you help him decipher
         the notes that he has taken?
       </p>
       <div class = "game">
@@ -63,54 +63,75 @@
           <div class = "clueContainer">
             <p style = "text-align:center;"> *** Clues *** </p>
             <ol class = 'clues' id = 'game1clues'>
-              <li> The tree with thick leaves, the tree with white flowers, and the tree that is used for making furniture are all different trees. </li>
-              <li> The tree that is used for making fish poison doesn't have white flowers. </li>
-              <li> Of the tree with thick leaves and the tree with white flowers, one is used to make fish poison. </li>
-              <li> The tree with thick leaves cannot be used to make fish poison. </li>
+              <li> The tree with spoon-shaped leaves is not poisonous. </li>
+              <li> Of the tree with thick leaves and the tree that is used to make chairs, one of them is called the Hard Milkwood. </li>
+              <li> The Indian Rubber Tree, which is not poisonous, is an ornamental plant with thick leaves. </li>
+              <li> The Pong Pong is poisonous. </li>
             </ol>
           </div>
           <br/>
-          <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid1", "levelTwo")'>
+          <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid1", "winning1Modal", levelOne.winningSelections, 9)'>
             Check solution!
           </button>
         </div>
       </div>
-      <div class = '1winningModal'>
+      <br/>
+      <div class = 'winning1Modal'>
 
       </div>
     </div>
 
     <!-- Med one -->
     <div class = "tabContent" id = 'lvl2'>
-      <h2> Puzzle #2 </h2>
+      <h2> Puzzle #2 : Edible Plants </h2>
       <p class = 'story'>
-        This is Jeremy's first time in the gardens and he is
+        Jennifer, a community gardener, is planning a get-together with her gardening buddies Megan and Rose.  All three
+        gardeners shared produce from their gardens and made food with each others' produce: can you figure out who bought and made what?
       </p>
       <div class = "game">
         <table class = "logicGrid">
+          <colgroup>
+            <col style = "width : 11.11%" />
+            <col style = "width : 11.11%" />
+            <col style = "width : 11.11%" />
+            <col style = "width : 11.11%" />
+            <col style = "width : 11.11%" />
+            <col style = "width : 11.11%" />
+            <col style = "width : 11.11%" />
+            <col style = "width : 11.11%" />
+          </colgroup>
           <tbody id = "logicGrid2">
 
           </tbody>
         </table>
-        <div class = "clueContainer">
-          <ol class = 'clues' id = 'game1clues'>
-
-          </ol>
+        <div>
+          <div class = "clueContainer">
+            <p style = "text-align:center;"> *** Clues *** </p>
+            <ol class = 'clues' id = 'game1clues'>
+              <li> The Chocolate Mint plant is neither used for stir-fries or soups. </li>
+              <li> The Thai basil is used for stir-frying, but cannot be frozen. </li>
+              <li> The plant that can be frozen also needs some water to survive. </li>
+              <li> The plant that is used for soups is not stored in water or freezable. </li>
+            </ol>
+          </div>
+          <br />
+          <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid2", "levelOne")'>
+            Check solution!
+          </button>
         </div>
-        <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid2", "levelOne")'>
-          Check solution!
-        </button>
       </div>
-      <div class = '2winningModal'>
+      <br/>
+      <div class = 'winning2Modal'>
 
       </div>
     </div>
 
     <!-- Hard one -->
     <div class = "tabContent" id = 'lvl3'>
-      <h2> Puzzle #3 </h2>
+      <h2> Puzzle #3 : Animals and Diets </h2>
       <p class = 'story'>
-        Welcome to thingamabob of a game that you can fiddle around with!
+        There are many fauna species that reside within Jurong Lake Gardens; each of these species not only has their own habitat, but also
+        their own diets.  Can you use the clues given on the right hand side to figure out the habitats and the diets of each species?
       </p>
       <div class = "game">
         <table class = "logicGrid">
@@ -118,16 +139,25 @@
 
           </tbody>
         </table>
-        <div class = "clueContainer">
-          <ol class = 'clues' id = 'game1clues'>
-
-          </ol>
+        <div>
+          <div class = "clueContainer">
+            <p style = "text-align:center;"> *** Clues *** </p>
+            <ol class = 'clues' id = 'game1clues'>
+              <li> The Monitor Lizard lives in the wetlands. </li>
+              <li> The White-Breasted Waterhen lives in the marshes. </li>
+              <li> The Common Kingfisher lives in an aquatic habitat, but unlike the monitor lizard or the white-breasted waterhen. </li>
+              <li> The Plaintain Squirrel eats nuts, but does not live amongst the flowers. </li>
+              <li> Of the animal that lives in the rivers and the animal that eats mammals, one of them is the kingfisher. </li>
+            </ol>
+          </div>
+          <br />
+          <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid3", "levelThree")'>
+            Check solution!
+          </button>
         </div>
-        <button class = "submitButton" onclick = 'hasWonPuzzle("logicGrid3", "levelThree")'>
-          Check solution!
-        </button>
       </div>
-      <div class = '3winningModal'>
+      <br/>
+      <div class = 'winning3Modal'>
 
       </div>
     </div>
@@ -138,8 +168,8 @@
 
       // Make the logic grids here:
       makeLogicGrid(6, 6, 3, 'logicGrid1', levelOne);
-      makeLogicGrid(10, 10, 5, 'logicGrid2', levelTwo);
-      makeLogicGrid(10, 10, 5, 'logicGrid3', levelThree);
+      makeLogicGrid(9, 9, 3, 'logicGrid2', levelTwo);
+      makeLogicGrid(8, 8, 4, 'logicGrid3', levelThree);
     </script>
   </body>
 </html>

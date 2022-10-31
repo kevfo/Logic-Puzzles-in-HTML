@@ -1,42 +1,57 @@
 // This file is used to store data on levels:
 const levelOne = {
   rowTitles : [
-    'White Flowers',
-    'Makes Furniture',
-    'Fish Poison',
+    'Pong Pong',
+    'Hard Milkwood',
+    'Indian Rubber Tree',
+    'Poisonous Fruits',
     'Thick Leaves',
-    'Thick Leaves',
-    'Thick Leaves'
+    'Spoon-shaped Leaves'
   ],
   colTitles : [
-    'White Flowers',
-    'White Flowers',
-    'Fish Poison',
-    'Thick Leaves',
-    'Thick Leaves',
-    'Thick Leaves'
+    'Pong Pong',
+    'Hard Milk-\n wood',
+    'Indian Rubber Tree',
+    'Makes Tables',
+    'Orna-\n mental Plant',
+    'Makes Fish Poison'
   ],
+  // Not best practice, but works well enough for now.
   winningSelections : [
-
+    `<td id="30 70" class="selectedCell" onclick="clickCell('30 70')">`,
+    `<td id="50 70" class="selectedCell" onclick="clickCell('50 70')">`,
+    `<td id="20 60" class="selectedCell" onclick="clickCell('20 60')">`,
+    `<td id="40 60" class="selectedCell" onclick="clickCell('40 60')">`,
+    `<td id="10 50" class="selectedCell" onclick="clickCell('10 50')">`,
+    `<td id="20 40" class="selectedCell" onclick="clickCell('20 40')">`,
+    `<td id="30 30" class="selectedCell" onclick="clickCell('30 30')">`,
+    `<td id="10 20" class="selectedCell" onclick="clickCell('10 20')">`,
+    `<td id="60 50" class="selectedCell" onclick="clickCell('60 50')">`
   ]
 }
 
 const levelTwo = {
   rowTitles : [
-    'White Flowers',
-    'Makes Furniture',
-    'Fish Poison',
-    'Thick Leaves',
-    'Thick Leaves',
-    'Thick Leaves'
+    'Freezable',
+    'Dryable',
+    "Stored in water",
+    "Sauteed",
+    "Sweets",
+    "Soup",
+    "Thai Basil",
+    "Chocolate Mint",
+    "Watercress"
   ],
   colTitles : [
-    'White Flowers',
-    'Making Furniture',
-    'Fish Poison',
-    'Thick Leaves',
-    'Thick Leaves',
-    'Thick Leaves'
+    'Freeza- \n ble',
+    'Dryable',
+    "Stored in water",
+    "Sauteed",
+    "Sweets",
+    "Soups",
+    "Moist \n soil",
+    "Some water",
+    "Sunny weather"
   ],
   winningSelections : [
 
@@ -45,20 +60,24 @@ const levelTwo = {
 
 const levelThree = {
   rowTitles : [
-    'White Flowers',
-    'Makes Furniture',
-    'Fish Poison',
-    'Thick Leaves',
-    'Thick Leaves',
-    'Thick Leaves'
+    'Monitor Lizard',
+    'White-Breasted Waterhen',
+    'Plantain Squirrel',
+    'Common Kingfisher',
+    'Insects',
+    'Small Mammals',
+    'Nuts',
+    'Fish',
   ],
   colTitles : [
-    'White Flowers',
-    'Making Furniture',
-    'Fish Poison',
-    'Thick Leaves',
-    'Thick Leaves',
-    'Thick Leaves'
+    'Monitor Lizard',
+    'White-Breasted Waterhen',
+    'Plantain Squirrel',
+    'Common Kingfisher',
+    'Treetops',
+    'Marshes',
+    'Rivers',
+    'Wetlands'
   ],
   winningSelections : [
 

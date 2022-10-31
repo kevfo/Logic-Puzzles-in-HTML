@@ -16,11 +16,25 @@ function navigateBetween(tabID, element) {
 
 // == FOR LOGIC GRIDS ==
 
+function makeIDs(tableID) {
+  switch(tableID) {
+    case 'logicGrid1':
+      return 10;
+      break;
+    case 'logicGrid2':
+      return 40;
+      break;
+    case 'logicGrid3':
+      return 70;
+      break;
+  }
+}
+
 // Makes the grid that we want:
 function makeLogicGrid(nrow, ncol, decrementBy, tableID, levelData) {
   let table = document.getElementById(tableID), rowCounter = 0, tableContents = '';
   let id = 0, headerBegin = '<tr> <td> </td>', headerEnd = '</tr>';
-  let cellContent = 0;
+  let cellContent = 0, multi = makeIDs(tableID);
 
   for (let i = levelData.colTitles.length - 1 ; i >= 0 ; i--) {
     headerBegin += `<td class = "colTitle"> ${levelData.colTitles[i]} </td>`;
@@ -34,7 +48,7 @@ function makeLogicGrid(nrow, ncol, decrementBy, tableID, levelData) {
     rowBegin += `<td class = "rowTitle"> ${levelData.rowTitles[y - 1]} </td>`;
 
     for (let x = 0 ; x < ncol ; x++) {
-      rowBegin += `<td class = "logicCell" id = "${x} ${y}" onclick = "clickCell('${x} ${y}')">  </td>`;
+      rowBegin += `<td class = "logicCell" id = "${x * multi + multi} ${y * multi + multi}" onclick = "clickCell('${x * multi + multi} ${y * multi + multi}')">  </td>`;
     }
 
     rowBegin += ` ${rowEnd}`;
@@ -69,20 +83,20 @@ function clickCell(cellID) {
 
 // == WINNING CONDITIONS ==
 
-// Checks to see the grid in question has been won:
-function hasWonPuzzle(tableID, solution, numSelections) {
-  let table = document.getElementById(tableID);
+// Checks to see the grid in question has been won.  If it is won, then the modal
+// is shown; otherwise, nothing happens.
+function hasWonPuzzle(tableID, modalClass, solution, numSelections) {
+  let tableChoices = document.querySelectorAll(`.selectedCell`);
+  // let modal = document.getElementById(winningModal);
   let selectedChoices = [], hasWon = false, selectionCount = 0, correctCount = 0;
+  let modal = document.querySelector(`.${modalClass}`);
 
-  table.innerHTML.split('<tr>').forEach(element => {
-    element.split(' ').forEach(subele => {
-      console.log(subele);
-    })
-  })
+  // esting purposes
+
 
   // selection counter here:
   if (selectionCount < numSelections) {
-    console.log("You still haven't chosen 9 cells.");
+    // modal.innerText = "You have not selected enough choices!"
   } else if (selectionCount === numSelections) {
     for (let i = 0 ; i < selectedChoices.length ; i++) {
       if (!solution.includes(selectedChoices[i])) {
@@ -91,13 +105,21 @@ function hasWonPuzzle(tableID, solution, numSelections) {
       correctCount++;
     }
   } else {
-    console.log("You've selected too many choices!");
+    // modal.innerText = "You have selected too many choices!";
+    console.log("Too many things!");
   }
 
   hasWon = correctCount === solution.length;
 
   // Replace this wiht a modal tag afterwards!
-  console.log(hasWon ? "You've won" : "Nope, not yet!");
+  // console.log(hasWon ? "Congratulations: you have won" : "Nope, not yet!");
+  if (hasWon) {
+    // modal.innerText = "Congratulations: you won!";
+    console.log("I've won!");
+  } else {
+    // modal.innerText = "You have some wrong answers - check again!"
+    console.log("I have not won!");
+  }
 }
 
 // Displays text for the modal:

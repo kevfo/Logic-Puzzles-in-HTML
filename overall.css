@@ -88,6 +88,7 @@ li {
   border: dashed black;
   border-radius: 10px;
   width: 20em;
+  padding-right: 15px;
 }
 
 .submitButton {
@@ -109,12 +110,14 @@ li {
 /* For the logic grid itself */
 .logicGrid {
   border: none;
+  width: 60%;
+  overflow-wrap: normal;
 }
 
 /* For the logic grid's cells */
 .logicCell {
   width: 50px;
-  height: 30px;
+  height: 50px;
   background-color: white;
   border: 1.5px solid black;
   cursor: pointer;
@@ -145,22 +148,47 @@ li {
   text-decoration-color: rgba(0, 0, 0, 0);
 }
 
-tr {
-  width: 100%;
-}
-
 .rowTitle {
-  width: 125px;
+  width: 30%;
   text-align: left;
   padding-right: 10px;
 }
 
 .colTitle {
   text-align: left;
-  height: 10%;
-  width: 50px;
+  height: 100%;
   transform: rotate(90deg);
-  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+/* CSS for the second logic grid puzzle */
+/*
+#logicGrid2 .rowTitle {
+  width: 100%;
+}
+*
+logicGrid2 .colTitle {
+  line-height: 15px;
+  height: 65px;
+  padding: 0px 5px 0px;
+  width: 100%;
+}
+*/
+logicGrid2 {
+  table-layout: fixed;
+}
+
+
+
+
+/* CSS for the third logic grid puzzle */
+
+#logicGrid3 .colTitle {
+  height: 76px;
+}
+
+#logicGrid3 {
+  width: 50%;
 }
 
 /* Miscellaneous CSS for the rest of the web-app*/
@@ -176,4 +204,5 @@ body {
   display: flex;
   justify-content: center;
   display: none;
+  backdrop-filter: blur(3px);
 }
