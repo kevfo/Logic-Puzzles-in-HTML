@@ -157,7 +157,7 @@ li {
 .colTitle {
   text-align: left;
   height: 100%;
-  transform: rotate(90deg);
+  /*transform: rotate(90deg);*/
   overflow: hidden;
 }
 

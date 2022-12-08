@@ -106,7 +106,7 @@ function hasWonPuzzle(tableID, modalClass, solution, numSelections) {
     }
   } else {
     // modal.innerText = "You have selected too many choices!";
-    console.log("Too many things!");
+    console.log("You have made one too many selections!");
   }
 
   hasWon = correctCount === solution.length;
@@ -115,10 +115,10 @@ function hasWonPuzzle(tableID, modalClass, solution, numSelections) {
   // console.log(hasWon ? "Congratulations: you have won" : "Nope, not yet!");
   if (hasWon) {
     // modal.innerText = "Congratulations: you won!";
-    console.log("I've won!");
+    alert("Congratulations!  You have won!!");
   } else {
     // modal.innerText = "You have some wrong answers - check again!"
-    console.log("I have not won!");
+    alert("Check your answers again - there are still some incorrect answers!");
   }
 }
 
