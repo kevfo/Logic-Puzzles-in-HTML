@@ -14,19 +14,16 @@ const levelOne = {
     'Indian Rubber Tree',
     'Makes Tables',
     'Orna-\n mental Plant',
-    'Makes Fish Poison'
+    'Makes Rat  Poison'
   ],
   // Not best practice, but works well enough for now.
   winningSelections : [
-    `<td id="30 70" class="selectedCell" onclick="clickCell('30 70')">`,
-    `<td id="50 70" class="selectedCell" onclick="clickCell('50 70')">`,
-    `<td id="20 60" class="selectedCell" onclick="clickCell('20 60')">`,
-    `<td id="40 60" class="selectedCell" onclick="clickCell('40 60')">`,
-    `<td id="10 50" class="selectedCell" onclick="clickCell('10 50')">`,
-    `<td id="20 40" class="selectedCell" onclick="clickCell('20 40')">`,
-    `<td id="30 30" class="selectedCell" onclick="clickCell('30 30')">`,
-    `<td id="10 20" class="selectedCell" onclick="clickCell('10 20')">`,
-    `<td id="60 50" class="selectedCell" onclick="clickCell('60 50')">`
+    '30 70', '50 70',
+    '20 60', '40 60',
+    '10 50', '20 40',
+    '30 30',
+    '10 20',
+    '60 50'
   ]
 }
 
@@ -54,7 +51,15 @@ const levelTwo = {
     "Sunny weather"
   ],
   winningSelections : [
-
+    '120 400', '160 400', '320 400',
+    '80 360', '200 360', '360 360',
+    '40 320', '240 320', '280 320',
+    '120 280', '160 280',
+    '80 240', '200 240',
+    '40 200', '240 200',
+    '40 160',
+    '120 120',
+    '80 80'
   ]
 }
 
@@ -80,6 +85,13 @@ const levelThree = {
     'Wetlands'
   ],
   winningSelections : [
-
+    '140 630', '350 630',
+    '280 560', '420 560',
+    '70 490', '560 490',
+    '210 420', '490 420',
+    '140 350',
+    '280 280',
+    '210 210',
+    '70 140'
   ]
 }

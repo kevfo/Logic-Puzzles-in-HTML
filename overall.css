@@ -126,7 +126,7 @@ li {
 
 .selectedCell {
   width: 50px;
-  height: 30px;
+  height: 50px;
   background-color: #7A9A01;
   border: 1.5px solid black;
   cursor: pointer;
@@ -135,7 +135,7 @@ li {
 
 .cancelCell {
   width: 50px;
-  height: 30px;
+  height: 50px;
   background-color: #AF272F;
   border: 1.5px solid black;
   cursor: pointer;

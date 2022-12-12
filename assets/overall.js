@@ -85,41 +85,16 @@ function clickCell(cellID) {
 
 // Checks to see the grid in question has been won.  If it is won, then the modal
 // is shown; otherwise, nothing happens.
-function hasWonPuzzle(tableID, modalClass, solution, numSelections) {
+function hasWonPuzzle(tableID, solution, numSelections) {
   let tableChoices = document.querySelectorAll(`.selectedCell`);
-  // let modal = document.getElementById(winningModal);
-  let selectedChoices = [], hasWon = false, selectionCount = 0, correctCount = 0;
-  let modal = document.querySelector(`.${modalClass}`);
+  let selectionCount = tableChoices.length, correctCount = 0;
 
-  // esting purposes
-
-
-  // selection counter here:
-  if (selectionCount < numSelections) {
-    // modal.innerText = "You have not selected enough choices!"
-  } else if (selectionCount === numSelections) {
-    for (let i = 0 ; i < selectedChoices.length ; i++) {
-      if (!solution.includes(selectedChoices[i])) {
-        break;
-      }
+  for (let i = 0 ; i < tableChoices.length ; i++) {
+    if (solution.includes(tableChoices[i].id)) {
+      console.log(tableChoices[i].id)
       correctCount++;
     }
-  } else {
-    // modal.innerText = "You have selected too many choices!";
-    console.log("You have made one too many selections!");
   }
 
-  hasWon = correctCount === solution.length;
-
-  // Replace this wiht a modal tag afterwards!
-  // console.log(hasWon ? "Congratulations: you have won" : "Nope, not yet!");
-  if (hasWon) {
-    // modal.innerText = "Congratulations: you won!";
-    alert("Congratulations!  You have won!!");
-  } else {
-    // modal.innerText = "You have some wrong answers - check again!"
-    alert("Check your answers again - there are still some incorrect answers!");
-  }
+  correctCount === numSelections ? alert("Congratulations!  You have solved the puzzle!") : alert("Check your answers again - there are still incorrect answers!");
 }
-
-// Displays text for the modal:
